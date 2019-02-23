@@ -1,0 +1,53 @@
+APPINTERNET
+
+21 de febrero de 2019
+###########################################
+
+
+* Geolocalización
+* Google Maps
+* Network
+
+=============================
+
+
+
+Primero debemos instalar la Geolocalización desde la página oficial de Ionic 4:
+La app nativa para "Geolocation".
+
+Después deberemor ir al siguiente link: https://github.com/ionic-team/ionic-native-google-maps/blob/master/documents/README.md
+E instalar lo que dice ahí, primero el npm y luego lo del ionic, en la parte de API KEY lo reemplzamos con nuestra API KEY: AIzSyDvnrn4179xHiXqCU_8c_ot4VeIJEcrNJ8
+De hecho, esta es la línea:
+
+>> ionic cordova plugin add cordova-plugin-googlemaps --variable API_KEY_FOR_ANDROID="AIzSyDvnrn4179xHiXqCU_8c_ot4VeIJEcrNJ8" --variable API_KEY_FOR_IOS="AIzSyDvnrn4179xHiXqCU_8c_ot4VeIJEcrNJ8"
+
+Luego implementamos lo que dice ahí el ejemplo...
+Sólo.
+
+Después hacemos la parte de Network...
+Instalamos el api native de ionic 4 de su página oficial "Network"
+Y luego implementamos el ejemplo de ahí.
+
+
+
+API KEY de Google Mpas:
+------------------------------
+
+>> AIzSyDvnrn4179xHiXqCU_8c_ot4VeIJEcrNJ8
+
+
+
+
+
+NOTA:
+========
+
+Si tenemos problema con Google Maps, con el probelam de algú Observable, probablemente sea la versión  que instalamos.
+Probemos instalando una versión mas nueva, por default nos instala @ionic-google-maps@4.2 al parecer,
+entonces tenemos que instalar la versión 5.0.0-beta.27 de este mismo.
+
+En caso de que nos diera error, la manera más fácil de solucionarlo es modificar el archivo package.jason
+y ubicar la línea donde dice el paquete @ionic-google-maps, corregir a la versión 5.0.0-beta.27 y
+después y eliminar la carpeta de node_modules. Finalmente instalar de nuevo todos los paquetes que tomará del package.json con
+el comando: npm install.
+
